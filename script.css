@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+header {
+  background: #4f46e5;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#consent {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left { width: 60%; }
+.right { width: 40%; }
+
+#camera {
+  width: 100%;
+  border-radius: 8px;
+  background: black;
+}
+
+button, input {
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.panel, .notes {
+  background: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
