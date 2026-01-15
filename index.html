@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emotion Adaptive Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <h2>Adaptive Learning</h2>
+  <span id="emotion-status">Emotion: Neutral</span>
+</header>
+
+<section id="consent">
+  <p>This app uses camera access.</p>
+  <button id="allow-camera">Allow Camera</button>
+</section>
+
+<main id="main" class="hidden">
+
+  <div class="left">
+    <input id="yt-link" placeholder="Paste YouTube link here" />
+    <button id="load-video">Load Video</button>
+
+    <iframe id="player" width="100%" height="360"
+      src=""
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <div class="buttons">
+      <button id="add-note">Add Note</button>
+      <button id="show-summary">Summary</button>
+      <button id="show-mcq">MCQs</button>
+    </div>
+  </div>
+
+  <div class="right">
+    <video id="camera" autoplay muted playsinline></video>
+
+    <div class="panel">
+      <h3>Assistant</h3>
+      <p id="assistant-text">Waiting...</p>
+    </div>
+
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul id="notes-list"></ul>
+    </div>
+  </div>
+
+</main>
+
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
